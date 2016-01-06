@@ -81,7 +81,9 @@ SRC 		= 	ft_atoi.c \
 				ft_lstrev.c \
 				ft_lstprint.c \
 				ft_lsttochar.c \
-				ft_abs.c
+				ft_abs.c \
+				ft_lstclear.c \
+				ft_lstcontentsize.c
 
 OBJ			=	$(SRC:.c=.o)
 

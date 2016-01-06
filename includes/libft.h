@@ -90,5 +90,7 @@ void				ft_list_reverse(t_list **begin);
 void				ft_lstprint(t_list *begin);
 char				*ft_lsttochar(t_list *list, char *str);
 int					ft_abs(int i);
+int					ft_lstcontentsize(t_list *begin);
+void				ft_lstclear(t_list **begin);
 
 #endif
