@@ -6,14 +6,19 @@
 /*   By: quroulon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 16:29:12 by quroulon          #+#    #+#             */
-/*   Updated: 2015/12/26 17:00:41 by quroulon         ###   ########.fr       */
+/*   Updated: 2016/01/22 12:17:19 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# define BUFF_SIZE 32
+
 # include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdio.h>
 
 typedef struct		s_list
 {
@@ -92,5 +97,6 @@ char				*ft_lsttochar(t_list *list, char *str);
 int					ft_abs(int i);
 int					ft_lstcontentsize(t_list *begin);
 void				ft_lstclear(t_list **begin);
+int					get_next_line(int const fd, char **line);
 
 #endif
