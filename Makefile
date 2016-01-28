@@ -6,7 +6,7 @@
 #    By: quroulon <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/28 17:00:10 by quroulon          #+#    #+#              #
-#    Updated: 2015/12/26 17:00:13 by quroulon         ###   ########.fr        #
+#    Updated: 2016/01/28 15:14:24 by quroulon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,7 +83,8 @@ SRC 		= 	ft_atoi.c \
 				ft_lsttochar.c \
 				ft_abs.c \
 				ft_lstclear.c \
-				ft_lstcontentsize.c
+				ft_lstcontentsize.c \
+				get_next_line.c
 
 OBJ			=	$(SRC:.c=.o)
 
