@@ -6,11 +6,11 @@
 /*   By: quroulon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/23 16:16:57 by quroulon          #+#    #+#             */
-/*   Updated: 2016/01/23 16:18:12 by quroulon         ###   ########.fr       */
+/*   Updated: 2016/02/10 15:27:40 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 static int			ft_read(t_list **gnl, t_list *tmp, int fd, int res)
 {
