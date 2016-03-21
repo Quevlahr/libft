@@ -99,6 +99,7 @@ int					ft_lstcontentsize(t_list *begin);
 void				ft_lstclear(t_list **begin);
 int					get_next_line(int const fd, char **line);
 int					ft_linelen(const char *str, int i);
+int					ft_lstlen(t_list *begin_list);
 
 
 #endif
