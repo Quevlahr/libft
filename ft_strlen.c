@@ -6,7 +6,7 @@
 /*   By: quroulon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 16:25:37 by quroulon          #+#    #+#             */
-/*   Updated: 2015/11/30 18:07:39 by quroulon         ###   ########.fr       */
+/*   Updated: 2016/03/23 12:07:53 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlen(const char *s)
 	int		i;
 
 	i = 0;
-	if (!s)
-		return (0);
 	while (s[i])
 		i++;
 	return (i);

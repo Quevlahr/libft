@@ -6,7 +6,7 @@
 /*   By: quroulon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 13:34:58 by quroulon          #+#    #+#             */
-/*   Updated: 2015/11/30 14:38:30 by quroulon         ###   ########.fr       */
+/*   Updated: 2016/03/23 12:07:37 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char		*ft_strnew(size_t size)
 	char	*str;
 	int		i;
 
-	if (!(str = (char*)malloc(sizeof(char) * size)))
+	if (!(str = (char*)malloc(sizeof(char) * size + 1)))
 		return (NULL);
 	i = 0;
 	while (i <= (int)size)
