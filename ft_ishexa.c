@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlen.c                                        :+:      :+:    :+:   */
+/*   ft_ishexa.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: quroulon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/21 15:17:29 by quroulon          #+#    #+#             */
-/*   Updated: 2016/03/21 15:17:52 by quroulon         ###   ########.fr       */
+/*   Created: 2016/03/26 17:15:57 by quroulon          #+#    #+#             */
+/*   Updated: 2016/03/26 17:16:22 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstlen(t_list *begin_list)
+int				ft_ishexa(char c)
 {
-	int		nb;
-
-	nb = 0;
-	while (begin_list)
-	{
-		nb++;
-		begin_list = begin_list->next;
-	}
-	return (nb);
+	if (c == '+' || c == '-' || ft_isdigit(c) == 1 || (c <= 'f' && c >= 'a') ||
+			(c <= 'F' && c >= 'A'))
+		return (1);
+	else
+		return (0);
 }
