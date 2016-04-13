@@ -12,13 +12,27 @@
 
 #include "libft.h"
 
+static int			ft_verif(char *str, int *i, int sign)
+{
+	while (str[*i] == ' ' || str[*i] == '\n' || str[*i] == '\t' ||
+			str[*i] == '\v' || str[*i] == '\f' || str[*i] == '\r')
+		(*i)++;
+	if (str[*i] == '-')
+		sign = -1;
+	else if (str[*i] == '+')
+		sign = 1;
+	return (sign);
+}
+
 long				ft_atoihexa(char *str)
 {
 	int				i;
 	long			res;
+	int				sign;
 
 	i = 0;
 	res = 0;
+	sign = ft_verif(str, &i, 1);
 	while (ft_isdigit(str[i]) == 1 || (str[i] <= 'f' && str[i] >= 'a') ||
 			(str[i] <= 'F' && str[i] >= 'A'))
 	{
@@ -33,5 +47,5 @@ long				ft_atoihexa(char *str)
 			res += (str[i] - 'A' + 10) * 16;
 		i++;
 	}
-	return (res /= 16);
+	return (sign * (res /= 16));
 }

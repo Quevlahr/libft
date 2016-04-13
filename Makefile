@@ -11,7 +11,9 @@
 # **************************************************************************** #
 
 NAME 		= 	libft.a
+
 CC			= 	gcc
+
 CFLAGS		= 	-Wall -Werror -Wextra
 
 SRC 		= 	ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
@@ -31,7 +33,7 @@ SRC 		= 	ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 				ft_lstdel.c ft_lstpush.c ft_lstsize.c ft_lstat.c ft_lstrev.c \
 				ft_lstprint.c ft_lsttochar.c ft_abs.c ft_lstclear.c \
 				ft_lstcontentsize.c ft_linelen.c get_next_line.c ft_lstlen.c \
-				ft_ishexa.c ft_atoihexa.c
+				ft_ishexa.c ft_atoihexa.c ft_convibase.c
 
 OBJ			=	$(SRC:.c=.o)
 
