@@ -27,7 +27,7 @@ static int		puissance(int nb, int psc)
 	return (res);
 }
 
-static char		how_n(int *n, int base, int psc)
+static char		how_n(int *n, int base, int psc, int maj)
 {
 	char		c_res;
 	int			i_res;
@@ -35,15 +35,18 @@ static char		how_n(int *n, int base, int psc)
 
 	i_res = 1;
 	tmp = puissance(base, psc);
-	while (*n > (i_res * tmp))
+	while (*n >= (i_res * tmp))
 		i_res++;
-	ft_putnbrdl(tmp);
+	i_res--;
 	*n -= i_res *tmp;
-	c_res = (i_res > 9 ? i_res + 'a' : i_res + '0');
+	if (maj == 1)
+		c_res = (i_res > 9 ? i_res + '7' : i_res + '0');
+	else
+		c_res = (i_res > 9 ? i_res + 'W' : i_res + '0');
 	return (c_res);
 }
 
-char			*ft_itoabase(int n, int base)
+char			*ft_itoabase(int n, int base, int maj)
 {
 	int			psc;
 	int			res;
@@ -53,22 +56,19 @@ char			*ft_itoabase(int n, int base)
 	psc = 0;
 	i = 0;
 	res = (n < 0) ? -1 : 1;
-	ft_abs(n);
+	n = ft_abs(n);
 	while (n >= puissance(base, psc))
 		psc++;
+	psc--;
 	str = ft_strnew(psc + 1);
+	if (n == 0 || base == 0)
+		str[0] = '0';
 	res == -1 ? str[i++] = '-' : 0;
-	while (psc > 0)
+	while (psc >= 0)
 	{
-		str[i] = how_n(&n, base, psc);
+		str[i] = how_n(&n, base, psc, maj);
 		psc--;
 		i++;
 	}
 	return (str);
-}
-
-int				main(void)
-{
-	printf("%s\n", ft_itoabase(420, 16));
-	return (0);
 }

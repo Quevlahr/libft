@@ -102,6 +102,6 @@ int					ft_linelen(const char *str, int i);
 int					ft_lstlen(t_list *begin_list);
 int					ft_ishexa(char c);
 long				ft_atoihexa(char *str);
-long				ft_convibase(int n, int base);
+char				*ft_itoabase(int n, int base, int maj);
 
 #endif
