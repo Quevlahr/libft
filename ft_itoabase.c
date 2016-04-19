@@ -6,7 +6,7 @@
 /*   By: quroulon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/13 20:27:13 by quroulon          #+#    #+#             */
-/*   Updated: 2016/04/13 20:27:31 by quroulon         ###   ########.fr       */
+/*   Updated: 2016/04/19 15:53:58 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static char		how_n(int *n, int base, int psc, int maj)
 	while (*n >= (i_res * tmp))
 		i_res++;
 	i_res--;
-	*n -= i_res *tmp;
+	*n -= i_res * tmp;
 	if (maj == 1)
 		c_res = (i_res > 9 ? i_res + '7' : i_res + '0');
 	else
