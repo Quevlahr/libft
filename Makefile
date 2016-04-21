@@ -26,7 +26,7 @@ HEADER 		= 	.
 all: $(NAME)
 
 .SILENT : $(NAME)
-$(NAME):
+$(NAME): $(OBJ)
 	@$(CC) $(CFLAGS) -c -I $(HEADER) $(SRC)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
