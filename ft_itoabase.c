@@ -57,18 +57,18 @@ char			*ft_itoabase(int n, int base, int maj)
 	i = 0;
 	res = (n < 0) ? -1 : 1;
 	n = ft_abs(n);
+	if (n == 0 || base < 2)
+	{
+		str = ft_strnew(1);
+		str[0] = '0';
+		return (str);
+	}
 	while (n >= puissance(base, psc))
 		psc++;
 	psc--;
-	str = ft_strnew(psc + 1);
-	if (n == 0 || base == 0)
-		str[0] = '0';
+	str = ft_strnew(psc + 2);
 	res == -1 ? str[i++] = '-' : 0;
 	while (psc >= 0)
-	{
-		str[i] = how_n(&n, base, psc, maj);
-		psc--;
-		i++;
-	}
+		str[i++] = how_n(&n, base, psc--, maj);
 	return (str);
 }
