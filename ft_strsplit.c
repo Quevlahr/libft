@@ -15,15 +15,6 @@
 
 static char		*cut_w(int i, char c, char const *s)
 {
-	// (void)i;
-	// (void)c;
-	// if (s[0] == 123)
-	// 	ft_putendl("YOLO");
-	// char		*str;
-
-	// str = ft_strnew(7);
-	// ft_strcpy(str, "COUCOU");
-	// return (str);
 	int		j;
 	char	*str;
 
