@@ -15,6 +15,15 @@
 
 static char		*cut_w(int i, char c, char const *s)
 {
+	// (void)i;
+	// (void)c;
+	// if (s[0] == 123)
+	// 	ft_putendl("YOLO");
+	// char		*str;
+
+	// str = ft_strnew(7);
+	// ft_strcpy(str, "COUCOU");
+	// return (str);
 	int		j;
 	char	*str;
 
@@ -50,7 +59,7 @@ static char		**prep_w(char const *s, char c, int nb)
 
 	res = 0;
 	i = 0;
-	if (!(tab = (char**)malloc(sizeof(char*) * nb + 1)))
+	if (!(tab = (char**)malloc(sizeof(char*) * (nb + 1))))
 		return (NULL);
 	while (s[i])
 	{
@@ -77,4 +86,21 @@ char			**ft_strsplit(char const *s, char c)
 	tab = prep_w(s, c, nb_w);
 	tab[nb_w] = NULL;
 	return (tab);
+}
+
+int				main(void)
+{
+	int			i = 0;
+	char		*str;
+	char		**res;
+
+	str = ft_strnew(100);
+	ft_strcpy(str, "Salut comment ca va ? ");
+	res = ft_strsplit(str, ' ');
+	while (res[i])
+	{
+		printf("i : %d, tab : %s, size : %zu\n", i, res[i], ft_strlen(res[i]));
+		i++;
+	}
+	ft_strdel(&str);
 }

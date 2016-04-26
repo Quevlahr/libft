@@ -47,8 +47,8 @@ static char		*decompose(int nb)
 	(nb < 0) ? s = '-' : 0;
 	(nb < 0) ? nb *= -1 : 0;
 	(nb < 0) ? j++ : 0;
-	tmp = (char*)malloc(sizeof(char) * ft_nbrlen(nb) + j + 1);
-	tab = (char*)malloc(sizeof(char) * ft_nbrlen(nb) + j + 1);
+	tmp = (char*)malloc(sizeof(char) * (ft_nbrlen(nb) + j + 1));
+	tab = (char*)malloc(sizeof(char) * (ft_nbrlen(nb) + j + 1));
 	tmp = remp(nb, &i, tmp, s);
 	j = 0;
 	while (i >= 0)
