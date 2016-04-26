@@ -104,6 +104,5 @@ int					ft_lstlen(t_list *begin_list);
 int					ft_ishexa(char c);
 long				ft_atoihexa(char *str);
 char				*ft_itoabase(int n, int base, int maj);
-char				*ft_itoabase_ull(unsigned long long n, int base, int maj);
 
 #endif
