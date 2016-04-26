@@ -87,20 +87,3 @@ char			**ft_strsplit(char const *s, char c)
 	tab[nb_w] = NULL;
 	return (tab);
 }
-
-int				main(void)
-{
-	int			i = 0;
-	char		*str;
-	char		**res;
-
-	str = ft_strnew(100);
-	ft_strcpy(str, "Salut comment ca va ? ");
-	res = ft_strsplit(str, ' ');
-	while (res[i])
-	{
-		printf("i : %d, tab : %s, size : %zu\n", i, res[i], ft_strlen(res[i]));
-		i++;
-	}
-	ft_strdel(&str);
-}
