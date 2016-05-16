@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: quroulon <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 16:29:12 by quroulon          #+#    #+#             */
-/*   Updated: 2016/01/22 12:17:19 by quroulon         ###   ########.fr       */
+/*   Updated: 2016/05/16 11:03:55 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ int					get_next_line(int const fd, char **line);
 int					ft_linelen(const char *str, int i);
 int					ft_lstlen(t_list *begin_list);
 int					ft_ishexa(char c);
-long				ft_atoihexa(char *str);
+long				ft_atoibase(char *str, int base);
 char				*ft_itoabase(int n, int base, int maj);
 
 #endif
