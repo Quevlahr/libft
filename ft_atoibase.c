@@ -6,13 +6,13 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/26 17:18:54 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/16 11:03:35 by quroulon         ###   ########.fr       */
+/*   Updated: 2016/05/21 19:54:59 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int			ft_verif(char *str, int *i, int sign)
+static int		ft_verif(char *str, int *i, int sign)
 {
 	while (str[*i] == ' ' || str[*i] == '\n' || str[*i] == '\t' ||
 			str[*i] == '\v' || str[*i] == '\f' || str[*i] == '\r')
@@ -26,9 +26,9 @@ static int			ft_verif(char *str, int *i, int sign)
 
 long			ft_atoibase(char *str, int base)
 {
-	int				i;
-	long			res;
-	int				sign;
+	int			i;
+	long		res;
+	int			sign;
 
 	i = 0;
 	res = 0;
