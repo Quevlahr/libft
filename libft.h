@@ -6,7 +6,7 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 16:29:12 by quroulon          #+#    #+#             */
-/*   Updated: 2016/06/04 23:02:28 by quroulon         ###   ########.fr       */
+/*   Updated: 2016/09/12 10:48:56 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,5 +105,6 @@ int					ft_ishexa(char c);
 long				ft_atoibase(char *str, int base);
 char				*ft_itoabase(int n, int base, int maj);
 long long			ft_atoi_ll(const char *str);
+int					ft_printf(const char *format, ...);
 
 #endif

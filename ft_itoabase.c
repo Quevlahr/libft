@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int		puissance(int nb, int psc)
+static int		puissance(int base, int psc)
 {
 	int			i;
 	int			res;
@@ -21,7 +21,7 @@ static int		puissance(int nb, int psc)
 	res = 1;
 	while (i < psc)
 	{
-		res *= nb;
+		res *= base;
 		i++;
 	}
 	return (res);
