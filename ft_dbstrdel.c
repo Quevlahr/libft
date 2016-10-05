@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlen.c                                        :+:      :+:    :+:   */
+/*   ft_dbstrdel.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/21 15:17:29 by quroulon          #+#    #+#             */
-/*   Updated: 2016/09/13 10:06:59 by quroulon         ###   ########.fr       */
+/*   Created: 2016/10/05 11:45:39 by quroulon          #+#    #+#             */
+/*   Updated: 2016/10/05 11:49:00 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstlen(t_list *begin_list)
+void			ft_dbstrdel(char ***tab)
 {
-	int		nb;
+	int			i;
 
-	nb = 0;
-	while (begin_list)
-	{
-		nb++;
-		begin_list = begin_list->next;
-	}
-	return (nb);
+	i = 0;
+	while ((*tab)[i])
+		ft_strdel(tab[i++]);
+	free((*tab));
 }
