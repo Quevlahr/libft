@@ -6,7 +6,7 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 16:29:12 by quroulon          #+#    #+#             */
-/*   Updated: 2016/10/05 11:48:38 by quroulon         ###   ########.fr       */
+/*   Updated: 2016/10/05 11:59:12 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,6 @@ long				ft_atoibase(char *str, int base);
 char				*ft_itoabase(int n, int base, int maj);
 long long			ft_atoi_ll(const char *str);
 int					ft_printf(const char *format, ...);
-void				ft_dbstrdel(char ***tab);
+void				ft_dbstrdel(char **tab);
 
 #endif
