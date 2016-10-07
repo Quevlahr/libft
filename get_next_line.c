@@ -5,110 +5,125 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/10 18:04:48 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/10 13:37:26 by quroulon         ###   ########.fr       */
+/*   Created: 2016/09/12 12:00:59 by quroulon          #+#    #+#             */
+/*   Updated: 2016/10/07 16:49:44 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int			ft_read(t_list **gnl, t_list *tmp, int fd, int res)
+static char			*ft_strsub_gnl(char const *s, unsigned int start, size_t len)
+{
+	char			*str;
+	int				i;
+
+	i = 0;
+	if (!(str = ft_strnew(len)) || s == NULL || len > ft_strlen(s))
+		return (NULL);
+	while ((unsigned long)start < len)
+	{
+		str[i] = ((char*)s)[start];
+		start++;
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
+}
+
+static int			ft_read(int const fd, char **str, char **line, int res)
 {
 	char			*buf;
-	t_list			*list;
+	int				i;
+	char			*tmp;
+	char			*tmp2;
 
 	buf = ft_strnew(BUFF_SIZE);
-	list = NULL;
 	while ((res = read(fd, buf, BUFF_SIZE)) > 0)
-		ft_lstpush(&list, buf, res);
+	{
+		i = 0;
+		while (buf[i] && buf[i] != '\n')
+			i++;
+		if (buf[i] == '\n')
+		{
+			if (*line == NULL)
+				*line = ft_strsub_gnl(buf, 0, i);
+			else
+			{
+				tmp = *line;
+				tmp2 = ft_strsub_gnl(buf, 0, i);
+				*line = ft_strjoin(tmp, tmp2);
+				ft_strdel(&tmp);
+				ft_strdel(&tmp2);
+			}
+			ft_strdel(str);
+			*str = ft_strsub_gnl(buf, ++i, ft_strlen(buf));
+			ft_strdel(&buf);
+			if ((*str)[0] == '\0')
+				ft_strdel(str);
+			return (1);
+		}
+		else
+		{
+			if (*line == NULL)
+				*line = ft_strnew(0);
+			tmp = *line;
+			*line = ft_strjoin(tmp, buf);
+			ft_strdel(&buf);
+			ft_strdel(&tmp);
+			buf = ft_strnew(BUFF_SIZE);
+		}
+	}
 	ft_strdel(&buf);
 	if (res == -1)
+	{
+		ft_strdel(str);
 		return (-1);
-	buf = ft_strnew(ft_lstcontentsize(list) + 1);
-	*buf = '\2';
-	buf++;
-	ft_lsttochar(list, buf);
-	buf--;
-	ft_lstpush(gnl, buf, ft_lstcontentsize(list) + 1);
-	tmp = *gnl;
-	while (tmp->next)
-		tmp = tmp->next;
-	tmp->content_size = fd;
-	tmp->content++;
-	ft_lstclear(&list);
-	ft_strdel(&buf);
-	return (1);
-}
-
-static int			ft_freegnl(t_list **gnl, t_list *tmp)
-{
-	int				i;
-
-	i = 1;
-	tmp = *gnl;
-	if (ft_lstsize(tmp) != 1)
-		while (tmp)
-		{
-			if (((char *)tmp->content)[0] != '\0')
-				return (0);
-			tmp = tmp->next;
-		}
-	while (gnl && i == 1)
-	{
-		while (((char *)(*gnl)->content)[0] != '\2')
-			(*gnl)->content--;
-		if ((*gnl)->next == NULL)
-			i = 0;
-		*gnl = (*gnl)->next;
 	}
-	ft_lstclear(gnl);
-	*gnl = NULL;
-	return (0);
-}
-
-static int			ft_line(t_list **gnl, t_list *tmp, char **line)
-{
-	int				i;
-	char			*str;
-
-	i = 0;
-	while (((char*)tmp->content)[i] != '\0' && ((char*)tmp->content)[i] != '\n')
-		i++;
-	*line = ft_strnew(i + 1);
-	str = ft_strnew(i + 1);
-	i = 0;
-	while (*((char*)tmp->content) != '\0' && *((char*)tmp->content) != '\n')
+	if (res == 0 && *line == NULL && *str == NULL)
+		return (0);
+	if (res == 0 && *line == NULL)
 	{
-		str[i] = *((char*)tmp->content);
-		tmp->content++;
-		i++;
+		tmp = ft_strnew(0);
+		*line = ft_strjoin(tmp, *str);
+		ft_strdel(&tmp);
+		ft_strdel(str);
+		return (1);
 	}
-	ft_strcpy(*line, str);
-	ft_strdel(&str);
-	if (*((char*)tmp->content) == '\n')
-		tmp->content++;
-	if (*((char*)tmp->content) == '\0')
-		ft_freegnl(gnl, NULL);
 	return (1);
 }
 
 int					get_next_line(int const fd, char **line)
 {
-	static t_list	*gnl = NULL;
-	t_list			*tmp;
+	int				i;
+	char			*tmp;
+	static char		*str = NULL;
 
-	tmp = gnl;
+	i = 0;
+	tmp = NULL;
 	if (line == NULL)
 		return (-1);
-	while (tmp && tmp->content_size != (size_t)fd)
-		tmp = tmp->next;
-	if (tmp == NULL)
-		if (ft_read(&gnl, tmp, fd, 0) < 0)
-			return (-1);
-	tmp = gnl;
-	while (tmp->content_size != (size_t)fd)
-		tmp = tmp->next;
-	if (((char*)tmp->content)[0] == '\0')
-		return (ft_freegnl(&gnl, NULL));
-	return (ft_line(&gnl, tmp, line));
+	*line = NULL;
+	if (str != NULL)
+	{
+		while (str[i])
+		{
+			if (str[i] == '\n')
+			{
+				*line = ft_strsub_gnl(str, 0, i);
+				if (str[++i] != '\0')
+				{
+					tmp = str;
+					str = ft_strsub_gnl(tmp, i, ft_strlen(str));
+					ft_strdel(&tmp);
+				}
+				else
+					ft_strdel(&str);
+				return (1);
+			}
+			i++;
+		}
+		*line = ft_strjoin("", str);
+		ft_strdel(&str);
+	}
+	return (ft_read(fd, &str, line, 0));
 }
