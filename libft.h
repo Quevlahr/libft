@@ -6,14 +6,14 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 16:29:12 by quroulon          #+#    #+#             */
-/*   Updated: 2016/10/07 11:07:27 by quroulon         ###   ########.fr       */
+/*   Updated: 2016/10/16 20:03:48 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# define BUFF_SIZE 1000
+# define BUFF_SIZE 16
 # define ULL unsigned long long
 
 # include <string.h>
@@ -26,6 +26,12 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+// typedef struct		s_gnl
+// {
+// 	char			*str;
+// 	char			*tmp;
+// }					t_gnl;
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);

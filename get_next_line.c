@@ -6,7 +6,7 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/12 12:00:59 by quroulon          #+#    #+#             */
-/*   Updated: 2016/10/09 20:17:52 by quroulon         ###   ########.fr       */
+/*   Updated: 2016/10/16 20:03:45 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@
 // 			i++;
 // 		if (buf[i] == '\n')
 // 		{
-// 			*line = (*line == NULL) ? ft_strsub(buf, 0, i) : ft_strjoin(*line, ft_strsub(buf, 0, i));
+// 			*line = (*line == NULL) ? ft_strsub(buf, 0, i) : ft_strjoin(*line, 
+//					ft_strsub(buf, 0, i));
 // 			*str = ft_strsub(buf, ++i, ft_strlen(buf));
 // 			if ((*str)[0] == '\0')
 // 				ft_strdel(str);
@@ -79,7 +80,6 @@
 // 	}
 // 	return (ft_read(fd, &str, line, 0));
 // }
-
 
 
 
@@ -166,6 +166,13 @@ static int			ft_read(int const fd, char **str, char **line, int res)
 	}
 	return (1);
 }
+
+// int					get_next_line(int const fd, char **line)
+// {
+// 	static t_gnl	*gnl;
+
+	
+// }
 
 int					get_next_line(int const fd, char **line)
 {
