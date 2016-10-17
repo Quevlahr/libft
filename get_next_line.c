@@ -6,7 +6,7 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/12 12:00:59 by quroulon          #+#    #+#             */
-/*   Updated: 2016/10/16 20:03:45 by quroulon         ###   ########.fr       */
+/*   Updated: 2016/10/17 16:52:37 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,13 +166,6 @@ static int			ft_read(int const fd, char **str, char **line, int res)
 	}
 	return (1);
 }
-
-// int					get_next_line(int const fd, char **line)
-// {
-// 	static t_gnl	*gnl;
-
-	
-// }
 
 int					get_next_line(int const fd, char **line)
 {
