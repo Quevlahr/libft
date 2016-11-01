@@ -6,7 +6,7 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 16:29:12 by quroulon          #+#    #+#             */
-/*   Updated: 2016/10/17 16:52:32 by quroulon         ###   ########.fr       */
+/*   Updated: 2016/11/01 14:54:29 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,16 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_gnl
+{
+	int				i;
+	int				j;
+	char			*str;
+	char			*tmp;
+	char			*buff;
+	char			*line;
+}					t_gnl;
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
