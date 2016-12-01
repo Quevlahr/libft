@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/13 20:27:13 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:12:29 by quroulon         ###   ########.fr       */
+/*   Created: 2016/12/01 12:50:10 by quroulon          #+#    #+#             */
+/*   Updated: 2016/12/01 12:56:00 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ char			*ft_itoabase(int n, int base, int maj)
 	psc = 0;
 	i = 0;
 	res = (n < 0) ? -1 : 1;
+	n *= (n < 0) ? -1 : 1;
 	n = ft_abs(n);
 	if (n == 0 || base < 2)
 	{
