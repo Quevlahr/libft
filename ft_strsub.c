@@ -6,7 +6,7 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 13:18:15 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:13:16 by quroulon         ###   ########.fr       */
+/*   Updated: 2016/12/01 12:07:50 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char		*ft_strsub(char const *s, unsigned int start, size_t len)
 	int		i;
 
 	i = 0;
-	if (!(str = ft_strnew(len)) || s == NULL || len > ft_strlen(s))
+	if (!(s == NULL || len > ft_strlen(s) || str = ft_strnew(len)))
 		return (NULL);
-	while ((unsigned long)i < len)
+	while ((unsigned long)i < len && ((char *)s)[start])
 	{
 		str[i] = ((char*)s)[start];
 		start++;
