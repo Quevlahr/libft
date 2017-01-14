@@ -6,7 +6,7 @@
 #    By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/28 17:00:10 by quroulon          #+#    #+#              #
-#    Updated: 2017/01/14 20:20:49 by quroulon         ###   ########.fr        #
+#    Updated: 2017/01/14 20:48:21 by quroulon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,15 +14,17 @@ NAME 		= 	libft.a
 
 CC			= 	gcc
 
-CFLAGS		= 	-Wall -Werror -Wextra -g
+CFLAGS		= 	-Wall -Werror -Wextra -I $(INCDIR)
 
 SRC			=	$(SRCLIBFT) $(SRCPRINTF)
 
 OBJ			=	$(OBJLIBFT) $(OBJPRINTF)
 
 INC			=	$(INCLIBFT) $(INCPRINTF)
-INCPRINTF	=	$(PRTDIR)/ft_printf.h
-INCLIBFT	=	libft.h
+INCPRINTF	=	$(INCDIR)/ft_printf.h
+INCLIBFT	=	$(INCDIR)/libft.h
+
+INCDIR		=	./includes
 
 _RED		=	\033[0;31m
 _GREEN		=	\033[0;32m
@@ -118,7 +120,7 @@ $(OBJGNL): $(INCLIBFT)
 $(OBJPRINTF): $(INCPRINTF) $(INCLIBFT)
 
 %.o: %.c
-	@$(CC) -o $@ -c $< $(CFLAGS) -I .
+	@$(CC) -o $@ -c $< $(CFLAGS)
 	@echo "Compilation of $<"
 
 clean:
