@@ -6,12 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 13:18:15 by quroulon          #+#    #+#             */
-/*   Updated: 2016/12/01 12:57:43 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:43:03 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#include "ft_stringtools.h"
 
 char		*ft_strsub(char const *s, unsigned int start, size_t len)
 {

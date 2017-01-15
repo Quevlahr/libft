@@ -6,12 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 14:25:24 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:12:37 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:18:47 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#include "ft_list.h"
 
 t_list		*ft_lstnew(void const *content, size_t content_size)
 {

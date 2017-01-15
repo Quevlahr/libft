@@ -6,11 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 11:01:42 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:12:21 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:31:40 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_chartools.h"
 
 int		ft_isalnum(int c)
 {

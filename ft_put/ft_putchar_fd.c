@@ -6,11 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 15:51:27 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:12:49 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:39:13 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_display.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

@@ -6,12 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 15:33:35 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:12:35 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:18:29 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#include "ft_list.h"
 
 void		ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {

@@ -6,12 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 17:40:01 by quroulon          #+#    #+#             */
-/*   Updated: 2016/10/07 15:30:38 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:41:48 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#include "ft_stringtools.h"
 
 char	*ft_strdup(const char *s1)
 {

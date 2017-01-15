@@ -6,11 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/26 17:15:57 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:12:27 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:31:58 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_chartools.h"
 
 int				ft_ishexa(char c)
 {

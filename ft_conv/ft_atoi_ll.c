@@ -6,11 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/04 23:02:02 by quroulon          #+#    #+#             */
-/*   Updated: 2016/06/06 12:56:52 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:27:53 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_conversion.h"
 
 long long		ft_atoi_ll(const char *str)
 {

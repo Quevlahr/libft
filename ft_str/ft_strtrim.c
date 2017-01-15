@@ -6,12 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 16:07:51 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:13:17 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:43:09 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#include "ft_stringtools.h"
 
 char		*ft_strtrim(char const *s)
 {

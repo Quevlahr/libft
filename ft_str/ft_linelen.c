@@ -6,11 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/10 18:02:06 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:12:29 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:41:11 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_stringtools.h"
 
 int		ft_linelen(const char *str, int i)
 {

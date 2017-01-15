@@ -6,11 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 20:00:18 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:13:15 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:42:49 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_stringtools.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

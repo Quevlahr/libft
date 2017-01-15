@@ -6,12 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 17:56:20 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:13:15 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:42:55 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#include "ft_stringtools.h"
 
 static char		*cut_w(int i, char c, char const *s)
 {

@@ -6,7 +6,7 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/31 15:19:17 by quroulon          #+#    #+#             */
-/*   Updated: 2017/01/14 21:09:15 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:08:18 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 
 # include "ft_chartools.h"
 # include "ft_conversion.h"
-# include "ft_len.h"
 # include "ft_list.h"
+# include "ft_stringtools.h"
+# include "ft_display.h"
 # include <stdarg.h>
+# include <stdlib.h>
 # include <locale.h>
 # include <limits.h>
 # include <wchar.h>
@@ -25,6 +27,7 @@
 # define UI unsigned int
 # define US unsigned short
 # define UC unsigned char
+# define ULL unsigned long long
 
 typedef struct		s_env
 {

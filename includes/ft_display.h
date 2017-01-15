@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_len.h                                           :+:      :+:    :+:   */
+/*   ft_display.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/14 21:01:37 by quroulon          #+#    #+#             */
-/*   Updated: 2017/01/14 21:09:51 by quroulon         ###   ########.fr       */
+/*   Created: 2017/01/15 19:28:05 by quroulon          #+#    #+#             */
+/*   Updated: 2017/01/15 20:40:38 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LEN_H
-# define FT_LEN_H
+#ifndef FT_DISPLAY_H
+# define FT_DISPLAY_H
 
-# include <string.h>
+# include "ft_stringtools.h"
+# include <unistd.h>
 
-typedef struct		s_list
-{
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}					t_list;
-
-int					ft_linelen(const char *str, int i);
-int					ft_lstlen(t_list *begin_list);
-int					ft_nbrlen(int n);
-size_t				ft_strlen(const char *s);
+void				ft_putchar(char c);
+void				ft_putchar_fd(char c, int fd);
+void				ft_putendl(char const *s);
+void				ft_putendl_fd(char const *s, int fd);
+void				ft_putnbr(int n);
+void				ft_putnbr_fd(int n, int fd);
+void				ft_putnbrdl(int n);
+void				ft_putstr(char const *s);
+void				ft_putstr_fd(char const *s, int fd);
 
 #endif

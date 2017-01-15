@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 16:25:37 by quroulon          #+#    #+#             */
-/*   Updated: 2016/10/07 15:28:04 by quroulon         ###   ########.fr       */
+/*   Created: 2015/12/02 18:02:56 by quroulon          #+#    #+#             */
+/*   Updated: 2017/01/15 20:41:14 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_stringtools.h"
 
-size_t	ft_strlen(const char *s)
+int		ft_nbrlen(int n)
 {
 	int		i;
 
 	i = 0;
-	while (s[i] != '\0')
+	if (n == 0)
+		return (1);
+	while (n != 0)
+	{
+		n /= 10;
 		i++;
+	}
 	return (i);
 }

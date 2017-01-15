@@ -6,11 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 16:06:04 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:13:03 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:41:55 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_stringtools.h"
 
 void		ft_striter(char *s, void (*f)(char *))
 {

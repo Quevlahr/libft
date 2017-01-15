@@ -6,11 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 13:14:06 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:12:47 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:33:00 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

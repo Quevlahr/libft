@@ -6,12 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 16:45:41 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:13:06 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:42:14 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#include "ft_stringtools.h"
 
 char		*ft_strmap(char const *s, char (*f)(char))
 {

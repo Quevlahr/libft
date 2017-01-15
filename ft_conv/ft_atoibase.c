@@ -6,11 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/26 17:18:54 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/21 19:54:59 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:27:57 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_conversion.h"
 
 static int		ft_verif(char *str, int *i, int sign)
 {

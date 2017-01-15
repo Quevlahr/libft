@@ -6,11 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 16:36:56 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:12:45 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:32:48 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {

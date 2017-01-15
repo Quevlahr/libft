@@ -6,11 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/18 16:14:57 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:12:31 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:18:11 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_list.h"
 
 t_list			*ft_lstat(t_list *begin, unsigned int nb)
 {

@@ -6,11 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/26 16:58:38 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:12:18 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:30:37 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_math.h"
 
 int			ft_abs(int i)
 {

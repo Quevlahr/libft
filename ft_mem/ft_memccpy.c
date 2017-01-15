@@ -6,11 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 17:14:14 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:12:42 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:32:38 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_memory.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {

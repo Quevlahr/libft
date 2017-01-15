@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
+/*   ft_math.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 18:02:56 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:12:48 by quroulon         ###   ########.fr       */
+/*   Created: 2017/01/15 20:29:48 by quroulon          #+#    #+#             */
+/*   Updated: 2017/01/15 20:30:23 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_MATH_H
+# define FT_MATH_H
 
-int		ft_nbrlen(int n)
-{
-	int		i;
+int					ft_toupper(int c);
+int					ft_tolower(int c);
+int					ft_abs(int i);
 
-	i = 0;
-	if (n == 0)
-		return (1);
-	while (n != 0)
-	{
-		n /= 10;
-		i++;
-	}
-	return (i);
-}
+#endif

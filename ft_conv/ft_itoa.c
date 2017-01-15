@@ -6,12 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 18:12:01 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:12:28 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:28:04 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#include "ft_conversion.h"
 
 static char		*remp(int nb, int *i, char *tmp, char s)
 {

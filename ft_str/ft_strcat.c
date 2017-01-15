@@ -6,11 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 16:10:32 by quroulon          #+#    #+#             */
-/*   Updated: 2016/05/03 16:12:55 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:41:17 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_stringtools.h"
 
 char	*ft_strcat(char *s1, char const *s2)
 {

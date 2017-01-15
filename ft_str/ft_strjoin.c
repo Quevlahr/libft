@@ -6,12 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 13:33:27 by quroulon          #+#    #+#             */
-/*   Updated: 2016/10/17 18:09:21 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:42:04 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#include "ft_stringtools.h"
 
 char		*ft_strjoin(char const *s1, char const *s2)
 {

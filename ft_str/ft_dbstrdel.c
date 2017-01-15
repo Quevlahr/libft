@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_dbstrdel.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/01 17:41:22 by quroulon          #+#    #+#             */
-/*   Updated: 2017/01/15 20:39:34 by quroulon         ###   ########.fr       */
+/*   Created: 2016/10/05 11:45:39 by quroulon          #+#    #+#             */
+/*   Updated: 2017/01/15 20:41:08 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_display.h"
+#include "ft_stringtools.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+void			ft_dbstrdel(char **tab)
 {
-	write(fd, s, ft_strlen(s));
+	int			i;
+
+	i = 0;
+	while (tab[i])
+	{
+		ft_strdel(&tab[i]);
+		i++;
+	}
+	free(tab);
 }

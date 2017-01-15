@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dbstrdel.c                                      :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/05 11:45:39 by quroulon          #+#    #+#             */
-/*   Updated: 2016/10/05 11:59:01 by quroulon         ###   ########.fr       */
+/*   Created: 2015/11/23 16:25:37 by quroulon          #+#    #+#             */
+/*   Updated: 2017/01/15 20:42:09 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_stringtools.h"
 
-void			ft_dbstrdel(char **tab)
+size_t	ft_strlen(const char *s)
 {
-	int			i;
+	int		i;
 
 	i = 0;
-	while (tab[i])
-	{
-		ft_strdel(&tab[i]);
+	while (s[i] != '\0')
 		i++;
-	}
-	free(tab);
+	return (i);
 }

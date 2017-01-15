@@ -6,11 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/01 12:50:10 by quroulon          #+#    #+#             */
-/*   Updated: 2016/12/01 12:56:00 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:28:08 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_conversion.h"
 
 static int		puissance(int base, int psc)
 {

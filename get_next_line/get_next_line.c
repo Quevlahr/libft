@@ -6,11 +6,11 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/12 12:00:59 by quroulon          #+#    #+#             */
-/*   Updated: 2016/11/01 14:55:44 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/15 20:10:37 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "get_next_line.h"
 
 static int			ft_clear(t_gnl *gnl, char **line)
 {
