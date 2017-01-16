@@ -6,7 +6,7 @@
 #    By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/28 17:00:10 by quroulon          #+#    #+#              #
-#    Updated: 2017/01/16 12:47:54 by quroulon         ###   ########.fr        #
+#    Updated: 2017/01/16 14:04:54 by quroulon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,13 +54,11 @@ CONVNAME	=	ft_atoi.c ft_atoi_ll.c ft_atoibase.c ft_itoa.c ft_itoabase.c
 CONVSRC		=	$(CONVNAME:%=$(CONVDIR)/%)
 FT_CONV		=	$(CONVSRC:%.c=%.o)
 
-
 ISDIR		=	ft_is
 ISNAME		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				ft_ishexa.c ft_isprint.c
 ISSRC		=	$(ISNAME:%=$(ISDIR)/%)
 FT_IS		=	$(ISSRC:%.c=%.o)
-
 
 LSTDIR		=	ft_lst
 LSTNAME		=	ft_lstadd.c ft_lstat.c ft_lstclear.c ft_lstcontentsize.c \
@@ -69,7 +67,6 @@ LSTNAME		=	ft_lstadd.c ft_lstat.c ft_lstclear.c ft_lstcontentsize.c \
 				ft_lstsize.c ft_lsttochar.c ft_lstlen.c
 LSTSRC		=	$(LSTNAME:%=$(LSTDIR)/%)
 FT_LST		=	$(LSTSRC:%.c=%.o)
-
 
 MATHDIR		=	ft_math
 MATHNAME	=	ft_abs.c ft_tolower.c ft_toupper.c
@@ -145,8 +142,6 @@ $(FT_MEM): $(INCSTR)
 $(FT_PRINTF): $(INCIS) $(INCCONV) $(INCLIST) $(INCSTR) $(INCPUT)
 
 $(GNL): $(INCSTR)
-
-$(OBJ): $(INC)
 
 %.o: %.c
 	@$(CC) -o $@ -c $< $(CFLAGS)

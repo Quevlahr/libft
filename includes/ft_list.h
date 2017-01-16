@@ -6,7 +6,7 @@
 /*   By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/14 21:03:57 by quroulon          #+#    #+#             */
-/*   Updated: 2017/01/16 12:46:12 by quroulon         ###   ########.fr       */
+/*   Updated: 2017/01/16 14:05:24 by quroulon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,5 @@ void				ft_lstpush(t_list **begin, void *content, size_t size);
 void				ft_list_reverse(t_list **begin);
 int					ft_lstsize(t_list *begin);
 char				*ft_lsttochar(t_list *list, char *str);
-
-// t_list				*ft_lstcreate(void *content, size_t size);
 
 #endif
