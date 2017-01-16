@@ -6,7 +6,7 @@
 #    By: quroulon <quroulon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/28 17:00:10 by quroulon          #+#    #+#              #
-#    Updated: 2017/01/15 21:30:02 by quroulon         ###   ########.fr        #
+#    Updated: 2017/01/16 12:47:54 by quroulon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,11 +23,21 @@ OBJ			=	$(FT_CONV) $(FT_IS) $(FT_LST) $(FT_MATH) $(FT_MEM) $(FT_PUT) \
 
 SRC			= 	$(CONVSRC) $(ISSRC) $(LSTSRC) $(MATHSRC) $(MEMSRC) \
 				$(PRINTSRC) $(PUTSRC) $(STRSRC) $(GNLSRC) $(PRINTFSRC)
-# INC			=	$(INCLIBFT) $(INCPRINTF)
-# INCPRINTF	=	$(INCDIR)/ft_printf.h
-# INCLIBFT	=	$(INCDIR)/libft.h
 
-INCDIR		=	./includes
+INCDIR		=	includes
+INCIS		=	$(INCDIR)/ft_chartools.h
+INCCONV		=	$(INCDIR)/ft_conversion.h
+INCPUT		=	$(INCDIR)/ft_display.h
+INCLIST		=	$(INCDIR)/ft_list.h
+INCMATH		=	$(INCDIR)/ft_math.h
+INCMEM		=	$(INCDIR)/ft_memory.h
+INCPRINTF	=	$(INCDIR)/ft_printf.h
+INCSTR		=	$(INCDIR)/ft_stringtools.h
+INCGNL		=	$(INCDIR)/get_next_line.h
+
+INC			=	$(INCIS) $(INCCONV) $(INCPUT) $(INCLIST) $(INCMATH) $(INCMEM) \
+				$(INCPRINTF) $(INCSTR) $(INCGNL)
+
 
 _RED		=	\033[0;31m
 _GREEN		=	\033[0;32m
@@ -124,11 +134,19 @@ $(NAME): $(OBJ)
 	@ranlib $@
 	@echo "$(_GREEN)Creation of exe $@$(_RESET)"
 
-# $(OBJLIBFT): $(INCLIBFT)
+$(FT_CONV): $(INCIS) $(INCSTR) $(INCMATH)
 
-# $(OBJGNL): $(INCLIBFT)
+$(FT_PUT): $(INCSTR)
 
-# $(OBJPRINTF): $(INCPRINTF) $(INCLIBFT)
+$(FT_LST): $(INCSTR) $(INCMEM)
+
+$(FT_MEM): $(INCSTR)
+
+$(FT_PRINTF): $(INCIS) $(INCCONV) $(INCLIST) $(INCSTR) $(INCPUT)
+
+$(GNL): $(INCSTR)
+
+$(OBJ): $(INC)
 
 %.o: %.c
 	@$(CC) -o $@ -c $< $(CFLAGS)
